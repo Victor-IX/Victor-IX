@@ -1,0 +1,15 @@
+[project]
+name = "Victor-IX"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Victor", email = "victor.ched@gmail.com"},
+]
+dependencies = ["requests>=2.32.3", "lxml>=5.3.1", "python-dateutil>=2.9.0.post0"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false

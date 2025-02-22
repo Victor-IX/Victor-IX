@@ -1,0 +1,41 @@
+name: README build
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Get Python 3.12
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: |
+          echo "Venv setup"
+          python3 -m venv .venv
+          source ./.venv/bin/activate
+          echo "Installing dependencies"
+          pip install -e ./
+      - name: Update README file
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+        run: python today.py
+      - name: Commit
+        run: |-
+          git add .
+          git diff
+          git config --global user.email "github-actions-bot@victor-ix.github.io"
+          git config --global user.name "Victor-IX/GitHub-Actions-Bot"
+          git commit -m "Updated README" -a || echo "No changes to commit"
+          git push
