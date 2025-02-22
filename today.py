@@ -11,7 +11,7 @@ import hashlib
 # Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
 # Issues and pull requests permissions not needed at the moment, but may be used in the future
 HEADERS = {"authorization": "token " + os.environ["ACCESS_TOKEN"]}
-USER_NAME = os.environ["USER_NAME"]
+USER_NAME = "Victor-IX"
 QUERY_COUNT = {
     "user_getter": 0,
     "follower_getter": 0,
@@ -310,8 +310,14 @@ def loc_query(
             edges,
         )
     else:
+        edges += request.json()["data"]["user"]["repositories"]["edges"]
+        edges = [
+            edge
+            for edge in edges
+            if edge["node"]["nameWithOwner"] != "Victor-IX/winget-pkgs"
+        ]
         return cache_builder(
-            edges + request.json()["data"]["user"]["repositories"]["edges"],
+            edges,
             comment_size,
             force_cache,
         )
@@ -415,33 +421,6 @@ def flush_cache(edges, filename, comment_size):
             )
 
 
-def add_archive():
-    """
-    Several repositories I have contributed to have since been deleted.
-    This function adds them using their last known data
-    """
-    with open("cache/repository_archive.txt", "r") as f:
-        data = f.readlines()
-    old_data = data
-    data = data[7 : len(data) - 3]  # remove the comment block
-    added_loc, deleted_loc, added_commits = 0, 0, 0
-    contributed_repos = len(data)
-    for line in data:
-        repo_hash, total_commits, my_commits, *loc = line.split()
-        added_loc += int(loc[0])
-        deleted_loc += int(loc[1])
-        if my_commits.isdigit():
-            added_commits += int(my_commits)
-    added_commits += int(old_data[-1].split()[4][:-1])
-    return [
-        added_loc,
-        deleted_loc,
-        added_loc - deleted_loc,
-        added_commits,
-        contributed_repos,
-    ]
-
-
 def force_close_file(data, cache_comment):
     """
     Forces the file to close, preserving whatever data was written to it
@@ -483,6 +462,7 @@ def svg_overwrite(
     """
     tree = etree.parse(filename)
     root = tree.getroot()
+    justify_format(root, "age_data", age_data, 14)
     justify_format(root, "commit_data", commit_data, 22)
     justify_format(root, "star_data", star_data, 14)
     justify_format(root, "repo_data", repo_data, 6)
@@ -628,15 +608,6 @@ if __name__ == "__main__":
         graph_repos_stars, "repos", ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"]
     )
     follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
-
-    # several repositories that I've contributed to have since been deleted.
-    if OWNER_ID == {"id": "MDQ6VXNlcjU2MTgyNjgx"}:
-        archived_data = add_archive()
-
-        for index in range(len(total_loc) - 1):
-            total_loc[index] += archived_data[index]
-        contrib_data += archived_data[-1]
-        commit_data += int(archived_data[-2])
 
     for index in range(len(total_loc) - 1):
         total_loc[index] = "{:,}".format(
