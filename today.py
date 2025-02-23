@@ -288,10 +288,9 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
             edges,
         )
     else:
+        # Skip big fork repo and backup repo
         ignore_repos = [
             "Victor-IX/winget-pkgs",
-            "Victor-IX/Blender-Launcher-V2-Test",
-            "Victor-IX/Blender-Launcher-V2",
             "Victor-IX/Blender-Launcher-V2-Backup",
         ]
         edges += request.json()["data"]["user"]["repositories"]["edges"]
@@ -337,22 +336,52 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
         repo_hash, commit_count, *__ = data[index].split()
         if repo_hash == hashlib.sha256(edges[index]["node"]["nameWithOwner"].encode("utf-8")).hexdigest():
             try:
+                # Do not update the LOC count for these repositories
+                no_line_count_filter = [
+                    "d83c00b10ab858138f007136bef66ae6602bf92221f76d1550fecef7f6458379",
+                    "931f68c24c5293c80ed88fb84e74d287f05afad38f8a4ceaab2e5ccd8fb2831f",
+                    "c856fccdeb88c1bc3821b81625e86d857ad2a4b10bd654a66f9b0470643c5cd6",
+                    "def29d86d31b9d761f3d947502897d1b3188619bd6f38be60fa74e5e1fdbe1ee",
+                    "b9c9df18717e57f9dd6a3c7ab083561b8d2ed9086798a5d2a5d4e2ed5eac24b2",
+                ]
+                print(f"Repo name: {edges[index]['node']['nameWithOwner']}")
+                print(f"Repo hash: {repo_hash}")
+
                 if int(commit_count) != edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"]:
                     # if commit count has changed, update loc for that repo
                     owner, repo_name = edges[index]["node"]["nameWithOwner"].split("/")
                     loc = recursive_loc(owner, repo_name, data, cache_comment)
-                    data[index] = (
-                        repo_hash
-                        + " "
-                        + str(edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"])
-                        + " "
-                        + str(loc[2])
-                        + " "
-                        + str(loc[0])
-                        + " "
-                        + str(loc[1])
-                        + "\n"
-                    )
+                    if repo_hash in no_line_count_filter:
+                        print("No line count filter")
+                        data[index] = (
+                            repo_hash
+                            + " "
+                            + str(edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"])
+                            + " "
+                            + str(loc[2])
+                            + " "
+                            + str(0)
+                            + " "
+                            + str(0)
+                            + "\n"
+                        )
+                    else:
+                        data[index] = (
+                            repo_hash
+                            + " "
+                            + str(edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"])
+                            + " "
+                            + str(loc[2])
+                            + " "
+                            + str(loc[0])
+                            + " "
+                            + str(loc[1])
+                            + "\n"
+                        )
+
+                    print(f"LOC+: {loc[0]}")
+                    print(f"LOC-: {loc[1]}")
+                    print(f"LOC Commit: {loc[2]}")
             except TypeError:  # If the repo is empty
                 data[index] = repo_hash + " 0 0 0 0\n"
     with open(filename, "w") as f:
@@ -421,7 +450,7 @@ def svg_overwrite(
     """
     tree = etree.parse(filename)
     root = tree.getroot()
-    justify_format(root, "age_data", age_data, 14)
+    justify_format(root, "age_data", age_data, 46)
     justify_format(root, "commit_data", commit_data, 22)
     justify_format(root, "star_data", star_data, 14)
     justify_format(root, "repo_data", repo_data, 6)
