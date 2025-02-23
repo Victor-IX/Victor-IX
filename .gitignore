@@ -2,4 +2,4 @@
 .python-version
 .pdm-python
 pdm.lock
-./.venv/*
+/.venv/*
