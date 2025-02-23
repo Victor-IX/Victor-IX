@@ -344,8 +344,6 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
                     "def29d86d31b9d761f3d947502897d1b3188619bd6f38be60fa74e5e1fdbe1ee",
                     "b9c9df18717e57f9dd6a3c7ab083561b8d2ed9086798a5d2a5d4e2ed5eac24b2",
                 ]
-                print(f"Repo name: {edges[index]['node']['nameWithOwner']}")
-                print(f"Repo hash: {repo_hash}")
 
                 if int(commit_count) != edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"]:
                     # if commit count has changed, update loc for that repo
@@ -378,10 +376,6 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
                             + str(loc[1])
                             + "\n"
                         )
-
-                    print(f"LOC+: {loc[0]}")
-                    print(f"LOC-: {loc[1]}")
-                    print(f"LOC Commit: {loc[2]}")
             except TypeError:  # If the repo is empty
                 data[index] = repo_hash + " 0 0 0 0\n"
     with open(filename, "w") as f:
@@ -574,6 +568,7 @@ def formatter(query_type, difference, funct_return=False, whitespace=0):
 if __name__ == "__main__":
     """
     Andrew Grant (Andrew6rant), 2022-2025
+    Modified by Victor-IX, 2025
     """
     print("Calculation times:")
     user_data, user_time = perf_counter(user_getter, USER_NAME)
