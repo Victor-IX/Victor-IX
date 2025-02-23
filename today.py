@@ -310,12 +310,14 @@ def loc_query(
             edges,
         )
     else:
-        edges += request.json()["data"]["user"]["repositories"]["edges"]
-        edges = [
-            edge
-            for edge in edges
-            if edge["node"]["nameWithOwner"] != "Victor-IX/winget-pkgs"
+        ignore_repos = [
+            "Victor-IX/winget-pkgs",
+            "Victor-IX/Blender-Launcher-V2-Test",
+            "Victor-IX/Blender-Launcher-V2",
+            "Victor-IX/Blender-Launcher-V2-Backup",
         ]
+        edges += request.json()["data"]["user"]["repositories"]["edges"]
+        edges = [edge for edge in edges if edge["node"]["nameWithOwner"] not in ignore_repos]
         return cache_builder(
             edges,
             comment_size,
