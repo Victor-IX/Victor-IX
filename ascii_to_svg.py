@@ -1,5 +1,5 @@
-MAIN_X = 400
-STARTING_Y = 30
+MAIN_X = 380
+STARTING_Y = 40
 
 
 def main():
