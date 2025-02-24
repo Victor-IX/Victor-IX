@@ -12,17 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: Get Python 3.12
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Build
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          USER_NAME: ${{ secrets.USER_NAME }}
         run: |
           echo "Venv setup"
           python3 -m venv .venv
@@ -31,11 +30,13 @@ jobs:
           pip install -e ./
           echo "Running script"
           python3 ./today.py
-      - name: Commit
-        run: |-
+      - name: Commit Changes
+        run: |
+          git checkout main
+          git config user.name "Readme Bot"
+          git config user.email "Readme[bot]@victor-ix.noreply.github.com"
           git add .
-          git diff
-          git config --global user.email "github-actions-bot@victor-ix.github.io"
-          git config --global user.name "Victor-IX/GitHub-Actions-Bot"
-          git commit -m "Updated README" -a || echo "No changes to commit"
-          git push https://github-actions:${{ secrets.ACCESS_TOKEN }}@github.com/Victor-IX/Victor-IX.git
+          git diff --staged --quiet || git commit -m "Update README.md"
+      - name: Push Changes
+        run: |
+          git push --set-upstream origin main || echo "Push failed"
