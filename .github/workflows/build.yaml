@@ -38,4 +38,4 @@ jobs:
           git config --global user.email "github-actions-bot@victor-ix.github.io"
           git config --global user.name "Victor-IX/GitHub-Actions-Bot"
           git commit -m "Updated README" -a || echo "No changes to commit"
-          git push
+          git push https://github-actions:${{ secrets.ACCESS_TOKEN }}@github.com/Victor-IX/Victor-IX.git
