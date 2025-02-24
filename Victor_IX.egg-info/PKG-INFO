@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: Victor-IX
+Version: 0.1.0
+Summary: Default template for PDM package
+Author-email: Victor <victor.ched@gmail.com>
+License: MIT
+Requires-Python: ==3.12.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3
+Requires-Dist: lxml>=5.3.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+
+
+<a href="https://github.com/Victor-IX/Victor-IX">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Victor-IX/Victor-IX/main/dark_mode.svg">
+    <img alt="Victor Chedeville's GitHub Profile README" src="https://raw.githubusercontent.com/Victor-IX/Victor-IX/main/light_mode.svg">
+  </picture>
+</a>
