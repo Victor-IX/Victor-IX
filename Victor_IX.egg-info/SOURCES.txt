@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-Victor_IX.egg-info/PKG-INFO
-Victor_IX.egg-info/SOURCES.txt
-Victor_IX.egg-info/dependency_links.txt
-Victor_IX.egg-info/requires.txt
-Victor_IX.egg-info/top_level.txt

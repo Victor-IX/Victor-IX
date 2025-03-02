@@ -5,3 +5,4 @@ pdm.lock
 /.venv/*
 __pycache__/
 *.pyc
+Victor_IX.egg-info/*
