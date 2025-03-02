@@ -1,8 +1,8 @@
 import requests
 
 
-def get_total_download_count(repo_owner, repo_name):
-    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases"
+def get_total_download_count():
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
     params = {"per_page": 100}
     total_download_count = 0
 
@@ -27,7 +27,9 @@ def get_total_download_count(repo_owner, repo_name):
     return total_download_count
 
 
-repo_owner = "victor-ix"
-repo_name = "blender-launcher-v2"
+REPO_OWNER = "victor-ix"
+REPO_NAME = "blender-launcher-v2"
 
-total_download_count = get_total_download_count(repo_owner, repo_name)
+
+if __name__ == "__main__":
+    print(get_total_download_count())
