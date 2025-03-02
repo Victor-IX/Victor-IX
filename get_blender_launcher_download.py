@@ -31,8 +31,3 @@ repo_owner = "victor-ix"
 repo_name = "blender-launcher-v2"
 
 total_download_count = get_total_download_count(repo_owner, repo_name)
-
-if total_download_count > 0:
-    print(f"The total download count for all releases is: {total_download_count}")
-else:
-    print("Failed to retrieve the total download count.")
