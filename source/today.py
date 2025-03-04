@@ -627,7 +627,7 @@ if __name__ == "__main__":
         total_loc[index] = "{:,}".format(total_loc[index])  # format added, deleted, and total LOC
 
     svg_overwrite(
-        "resources/dark_mode.svg",
+        "source/resources/dark_mode.svg",
         age_data,
         commit_data,
         star_data,
@@ -637,7 +637,7 @@ if __name__ == "__main__":
         total_loc[:-1],
     )
     svg_overwrite(
-        "resources/light_mode.svg",
+        "source/resources/light_mode.svg",
         age_data,
         commit_data,
         star_data,
