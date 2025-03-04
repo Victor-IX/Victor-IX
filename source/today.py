@@ -311,7 +311,7 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
     """
     cached = True  # Assume all repositories are cached
     filename = (
-        "cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
+        "source/cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
     )  # Create a unique filename for each user
     try:
         with open(filename, "r") as f:
@@ -410,7 +410,7 @@ def add_archive():
     Several repositories I have contributed to have since been deleted or are stored on Azure.
     This function adds them using their last known data
     """
-    with open("cache/repository_archive.txt", "r") as f:
+    with open("source/cache/repository_archive.txt", "r") as f:
         data = f.readlines()
     old_data = data
     data = data[7 : len(data)]  # remove the comment block
@@ -436,7 +436,7 @@ def force_close_file(data, cache_comment):
     Forces the file to close, preserving whatever data was written to it
     This is needed because if this function is called, the program would've crashed before the file is properly saved and closed
     """
-    filename = "cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
+    filename = "source/cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
     with open(filename, "w") as f:
         f.writelines(cache_comment)
         f.writelines(data)
@@ -518,7 +518,7 @@ def commit_counter(comment_size):
     """
     total_commits = 0
     filename = (
-        "cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
+        "source/cache/" + hashlib.sha256(USER_NAME.encode("utf-8")).hexdigest() + ".txt"
     )  # Use the same filename as cache_builder
     with open(filename, "r") as f:
         data = f.readlines()
