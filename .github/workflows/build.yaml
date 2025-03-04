@@ -29,7 +29,7 @@ jobs:
           echo "Installing dependencies"
           pip install -e ./
           echo "Running script"
-          python3 ./today.py
+          python3 ./source/today.py
       - name: Commit Changes
         run: |
           git checkout main
