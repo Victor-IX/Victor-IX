@@ -1,8 +1,7 @@
 import datetime
 from dateutil import relativedelta
 
-# Year, month, day
-BIRTHDATE = datetime.datetime(2000, 6, 29)
+from config import BIRTHDATE
 
 
 def daily_readme():

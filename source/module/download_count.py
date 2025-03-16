@@ -1,7 +1,6 @@
 import requests
 
-# Repository URL
-REPO: str = "https://api.github.com/repos/victor-ix/blender-launcher-v2"
+from config import REPO
 
 
 def get_total_download_count():

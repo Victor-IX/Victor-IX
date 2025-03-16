@@ -1,9 +1,6 @@
 from datetime import datetime
 
-# Date when starting using blender, year, month, day
-DATE = datetime.datetime(2014, 12, 15)
-# Estimated number of default cubes removed per day
-CUBES_PER_DAY: int = 1
+from config import DATE, CUBES_PER_DAY
 
 
 def days_since_date() -> str:
