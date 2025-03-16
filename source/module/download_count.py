@@ -1,6 +1,18 @@
+import re
 import requests
 
+if __name__ == "__main__":
+    # Get the absolute path of the parent directory
+    import os
+    import sys
+
+    parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if parent_dir not in sys.path:
+        sys.path.insert(0, parent_dir)
+
+
 from config import REPO
+from request_manager import request_get
 
 
 def get_total_download_count():
@@ -9,20 +21,16 @@ def get_total_download_count():
     total_download_count = 0
 
     while True:
-        response = requests.get(url, params=params)
+        response = request_get(url, params=params)
+        releases = response.json()
 
-        if response.status_code == 200:
-            releases = response.json()
+        for release in releases:
+            for asset in release["assets"]:
+                total_download_count += asset["download_count"]
 
-            for release in releases:
-                for asset in release["assets"]:
-                    total_download_count += asset["download_count"]
-
-            if "next" in response.links:
-                url = response.links["next"]["url"]
-                params = {}
-            else:
-                break
+        if "next" in response.links:
+            url = response.links["next"]["url"]
+            params = {}
         else:
             break
 
