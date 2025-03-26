@@ -22,4 +22,4 @@ CUBES_PER_DAY: int = 1
 
 # Download count
 # Repository URL
-REPO: str = "https://api.github.com/repos/victor-ix/blender-launcher-v2"
+REPO_NAME: str = "blender-launcher-v2"

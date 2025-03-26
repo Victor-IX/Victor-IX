@@ -7,15 +7,12 @@ if __name__ == "__main__":
     if parent_dir not in sys.path:
         sys.path.insert(0, parent_dir)
 
-from config import USER_NAME
-from request_manager import request_get
+from request_manager import github_user
 
 
 def get_github_followers() -> int:
-    url = f"https://api.github.com/users/{USER_NAME}"
-
-    user_data = request_get(url, headers={"User-Agent": "GitHub-Follower-Counter"}).json()
-    return user_data.get("followers", 0)
+    user = github_user()
+    return user.followers
 
 
 if __name__ == "__main__":

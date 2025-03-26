@@ -8,28 +8,17 @@ if __name__ == "__main__":
         sys.path.insert(0, parent_dir)
 
 
-from config import REPO
-from request_manager import request_get
+from config import REPO_NAME
+from request_manager import github_repo
 
 
 def get_total_download_count():
-    url = f"{REPO}/releases"
-    params = {"per_page": 100}
+    repo = github_repo(REPO_NAME)
     total_download_count = 0
 
-    while True:
-        response = request_get(url, params=params)
-        releases = response.json()
-
-        for release in releases:
-            for asset in release["assets"]:
-                total_download_count += asset["download_count"]
-
-        if "next" in response.links:
-            url = response.links["next"]["url"]
-            params = {}
-        else:
-            break
+    for release in repo.get_releases():
+        for asset in release.get_assets():
+            total_download_count += asset.download_count
 
     return total_download_count
 

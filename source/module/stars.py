@@ -7,28 +7,15 @@ if __name__ == "__main__":
     if parent_dir not in sys.path:
         sys.path.insert(0, parent_dir)
 
-from config import USER_NAME, HEADERS
-from request_manager import request_get
+from request_manager import github_repo
 
 
 def get_total_stars():
-    repos = []
-    page = 1
+    stars = 0
+    repos = github_repo()
+    for repo in repos:
+        stars += repo.stargazers_count
 
-    while True:
-        # GitHub API URL for user repositories
-        url = f"https://api.github.com/users/{USER_NAME}/repos?per_page=100&page={page}"
-
-        response = request_get(url, headers=HEADERS)
-        page_repos = response.json()
-
-        if not page_repos:
-            break
-
-        repos.extend(page_repos)
-        page += 1
-
-    stars = sum(repo["stargazers_count"] for repo in repos)
     return stars
 
 
