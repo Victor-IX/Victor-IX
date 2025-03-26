@@ -11,8 +11,7 @@ from config import USER_NAME, HEADERS
 from request_manager import request_get
 
 
-def calculate_total_stars():
-    """Fetch all repositories for a given user, handling pagination."""
+def get_total_stars():
     repos = []
     page = 1
 
@@ -34,4 +33,4 @@ def calculate_total_stars():
 
 
 if __name__ == "__main__":
-    print(calculate_total_stars())
+    print(get_total_stars())

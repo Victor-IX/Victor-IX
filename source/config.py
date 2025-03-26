@@ -7,7 +7,8 @@ import os
 # Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
 # Issues and pull requests permissions not needed at the moment, but may be used in the future
 USER_NAME = "Victor-IX"
-HEADERS = {"authorization": "token " + os.environ["ACCESS_TOKEN"]}
+PAT = os.environ["ACCESS_TOKEN"]
+HEADERS = {"authorization": "token " + PAT}
 
 # Age
 # Year, month, day

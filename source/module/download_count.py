@@ -1,6 +1,3 @@
-import re
-import requests
-
 if __name__ == "__main__":
     # Get the absolute path of the parent directory
     import os
