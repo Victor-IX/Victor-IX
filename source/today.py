@@ -5,8 +5,8 @@ import os
 from lxml import etree
 import time
 import hashlib
-from get_blender_launcher_download import get_total_download_count
-from default_cube import days_since_date
+from module.download_count import get_total_download_count
+from module.default_cube import get_removed_cubes
 
 # Fine-grained personal access token with All Repositories access:
 # Account permissions: read:Followers, read:Starring, read:Watching
@@ -482,7 +482,7 @@ def svg_overwrite(
     justify_format(root, "loc_add", loc_data[0])
     justify_format(root, "loc_del", loc_data[1], 7)
     justify_format(root, "blender_launcher_dl", str(get_total_download_count()))
-    justify_format(root, "default_cube", str(days_since_date()))
+    justify_format(root, "default_cube", str(get_removed_cubes()))
     tree.write(filename, encoding="utf-8", xml_declaration=True)
 
 
