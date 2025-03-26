@@ -1,13 +1,20 @@
 from datetime import datetime
 
+if __name__ == "__main__":
+    # Get the absolute path of the parent directory
+    import os
+    import sys
+
+    parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if parent_dir not in sys.path:
+        sys.path.insert(0, parent_dir)
+
 from config import DATE, CUBES_PER_DAY
 
 
 def get_removed_cubes() -> str:
-    date_format = "%Y-%m-%d"
-    date_obj = datetime.strptime(DATE, date_format)
     today = datetime.now()
-    delta = today - date_obj
+    delta = today - DATE
     return str(delta.days * CUBES_PER_DAY)
 
 
