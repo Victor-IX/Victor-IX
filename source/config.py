@@ -23,3 +23,5 @@ CUBES_PER_DAY: int = 1
 # Download count
 # Repository URL
 REPO_NAME: str = "blender-launcher-v2"
+
+REPO_IGNORE_LIST = ["winget-pkgs", "Blender-Launcher-V2-Backup"]

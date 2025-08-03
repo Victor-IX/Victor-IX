@@ -1,16 +1,17 @@
 from github import Github
 
-from config import PAT
+from config import PAT, REPO_IGNORE_LIST
 
 
 def github_user():
     github = Github(PAT)
 
     rate_limit = github.get_rate_limit()
-    core_limit = rate_limit.core.limit
-    core_remaining = rate_limit.core.remaining
+    core = rate_limit.resources["core"]
+    core_limit = core.limit
+    core_remaining = core.remaining
     core_used = core_limit - core_remaining
-    core_reset = rate_limit.core.reset
+    core_reset = core.reset
 
     print("-------------------------------------")
     print("Requests:")
@@ -24,8 +25,10 @@ def github_user():
     return user
 
 
-def github_repo(repo: str | None = None):
+def github_repo(repo_name: str | None = None):
     user = github_user()
-    if not repo:
-        return user.get_repos()
-    return user.get_repo(repo)
+    if not repo_name:
+        repos_list = [repo for repo in user.get_repos() if repo.name not in REPO_IGNORE_LIST]
+        return repos_list
+
+    return user.get_repo(repo_name)
