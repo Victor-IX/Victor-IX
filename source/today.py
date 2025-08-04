@@ -345,6 +345,7 @@ def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
                     "c856fccdeb88c1bc3821b81625e86d857ad2a4b10bd654a66f9b0470643c5cd6",
                     "def29d86d31b9d761f3d947502897d1b3188619bd6f38be60fa74e5e1fdbe1ee",
                     "b9c9df18717e57f9dd6a3c7ab083561b8d2ed9086798a5d2a5d4e2ed5eac24b2",
+                    "621163083d62783317410d9fbd96d6dcf52382e240348d462de0edcfb89e2f18",
                 ]
 
                 if int(commit_count) != edges[index]["node"]["defaultBranchRef"]["target"]["history"]["totalCount"]:
