@@ -6,15 +6,11 @@
 #
 #
 meblenderconfig 0 38 0 0
-pyme 0 89 2613 732
-titanvalidation 0 182 10456 7244
 protoroguetools 0 21 0 0
 gamejam22 0 47 0 0 
 gamejam24 0 46 0 0
 gamejam25 0 10 0 0
-metoolbox 0 89 3995 1775
 metoolboxold 0 46 14263 12746
-projectsetup 0 127 20044 17675
 protorogue 0 5183 0 0
 titanproto 0 657 285 0
 uegitplugin 0 9 0 0
