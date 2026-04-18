@@ -16,6 +16,9 @@ license = { text = "MIT" }
 [tool.pdm]
 distribution = false
 
+[tool.setuptools]
+py-modules = []
+
 [tool.ruff]
 line-length = 120
 target-version = "py312"
