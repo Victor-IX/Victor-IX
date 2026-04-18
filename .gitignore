@@ -2,7 +2,11 @@
 .python-version
 .pdm-python
 pdm.lock
+uv.lock
 /.venv/*
 __pycache__/
 *.pyc
 Victor_IX.egg-info/*
+.claude/
+.venv/
+.vscode/

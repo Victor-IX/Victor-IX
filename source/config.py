@@ -10,6 +10,8 @@ USER_NAME = "Victor-IX"
 PAT = os.environ["ACCESS_TOKEN"]
 HEADERS = {"authorization": "token " + PAT}
 
+GRAPHQL_ENDPOINT = "https://api.github.com/graphql"
+
 # Age
 # Year, month, day
 BIRTHDATE = datetime.datetime(2000, 6, 29)

@@ -1,0 +1,15 @@
+{
+  "_comment": "Archive of deleted/inaccessible repositories the user contributed to. Counts are additive to live GitHub data.",
+  "repositories": [
+    {"name": "meblenderconfig", "my_commits": 38},
+    {"name": "protoroguetools", "my_commits": 21},
+    {"name": "gamejam22", "my_commits": 47},
+    {"name": "gamejam24", "my_commits": 46},
+    {"name": "gamejam25", "my_commits": 10},
+    {"name": "metoolboxold", "my_commits": 46},
+    {"name": "protorogue", "my_commits": 5183},
+    {"name": "titanproto", "my_commits": 657},
+    {"name": "uegitplugin", "my_commits": 9},
+    {"name": "meemo", "my_commits": 5}
+  ]
+}

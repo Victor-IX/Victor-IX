@@ -16,7 +16,3 @@ def daily_readme():
 
 def format_plural(unit):
     return "s" if unit != 1 else ""
-
-
-if __name__ == "__main__":
-    print(daily_readme())
