@@ -1,14 +1,30 @@
 from pathlib import Path
 
+from config import (
+    METRIC_EMPIRE_END,
+    METRIC_EMPIRE_HOURS_PER_WEEK,
+    METRIC_EMPIRE_START,
+    METRIC_EMPIRE_VACATION_DAYS_PER_YEAR,
+    NVIZZIO_END,
+    NVIZZIO_HOURS_PER_WEEK,
+    NVIZZIO_START,
+    NVIZZIO_VACATION_DAYS_PER_YEAR,
+    STAR_CITIZEN_END,
+    STAR_CITIZEN_HOURS_PER_WEEK,
+    STAR_CITIZEN_START,
+    STAR_CITIZEN_VACATION_DAYS_PER_YEAR,
+)
 from module.age import daily_readme
 from module.archive import get_archived_commit_count
 from module.commit import get_total_commits
 from module.default_cube import get_removed_cubes
 from module.download_count import get_total_download_count
 from module.followers import get_github_followers
+from module.maya_crash import get_maya_crashes
 from module.repo import get_contributed_repo_count, get_user_repo_count
 from module.stars import get_total_stars
 from module.svg import update_svg
+from module.work_hours import get_work_hours
 
 _RESOURCES = Path(__file__).resolve().parent / "resources"
 
@@ -22,6 +38,37 @@ _STEPS = (
     ("follower_data", "Fetching follower count", get_github_followers),
     ("blender_launcher_dl", "Fetching Blender Launcher downloads", get_total_download_count),
     ("default_cube", "Fetching removed default cubes", get_removed_cubes),
+    ("maya_crashes", "Counting Maya crashes encountered", get_maya_crashes),
+    (
+        "nvizzio_hours",
+        "Calculating hours at Nvizzio",
+        lambda: get_work_hours(
+            NVIZZIO_START,
+            NVIZZIO_END,
+            NVIZZIO_HOURS_PER_WEEK,
+            NVIZZIO_VACATION_DAYS_PER_YEAR,
+        ),
+    ),
+    (
+        "metric_empire_hours",
+        "Calculating hours at Metric Empire",
+        lambda: get_work_hours(
+            METRIC_EMPIRE_START,
+            METRIC_EMPIRE_END,
+            METRIC_EMPIRE_HOURS_PER_WEEK,
+            METRIC_EMPIRE_VACATION_DAYS_PER_YEAR,
+        ),
+    ),
+    (
+        "star_citizen_hours",
+        "Calculating hours on Star Citizen",
+        lambda: get_work_hours(
+            STAR_CITIZEN_START,
+            STAR_CITIZEN_END,
+            STAR_CITIZEN_HOURS_PER_WEEK,
+            STAR_CITIZEN_VACATION_DAYS_PER_YEAR,
+        ),
+    ),
 )
 
 

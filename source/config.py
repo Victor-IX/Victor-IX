@@ -22,6 +22,31 @@ DATE = datetime.datetime(2014, 12, 15)
 # Estimated number of default cubes removed per day
 CUBES_PER_DAY: int = 1
 
+# Maya crash counter
+# Date when starting using maya, year, month, day
+MAYA_CRASH_DATE = datetime.datetime(2025, 5, 5)
+# Estimated number of maya crashes per weekday (Monday to Friday)
+MAYA_CRASHES_PER_DAY: int = 1
+
+# Work hours counters
+# Nvizzio
+NVIZZIO_START = datetime.datetime(2021, 9, 13)
+NVIZZIO_END = datetime.datetime(2022, 4, 22)
+NVIZZIO_HOURS_PER_WEEK: float = 40
+NVIZZIO_VACATION_DAYS_PER_YEAR: float = 10
+
+# Metric Empire
+METRIC_EMPIRE_START = datetime.datetime(2022, 4, 25)
+METRIC_EMPIRE_END = datetime.datetime(2025, 5, 3)
+METRIC_EMPIRE_HOURS_PER_WEEK: float = 40
+METRIC_EMPIRE_VACATION_DAYS_PER_YEAR: float = 25
+
+# Star Citizen (leave END as None to count up to today)
+STAR_CITIZEN_START = datetime.datetime(2025, 5, 5)
+STAR_CITIZEN_END = None
+STAR_CITIZEN_HOURS_PER_WEEK: float = 40
+STAR_CITIZEN_VACATION_DAYS_PER_YEAR: float = 30
+
 # Download count
 # Repository URL
 REPO_NAME: str = "blender-launcher-v2"
