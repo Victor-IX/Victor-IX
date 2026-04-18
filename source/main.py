@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 
 from config import (
@@ -22,6 +23,7 @@ from module.download_count import get_total_download_count
 from module.followers import get_github_followers
 from module.maya_crash import get_maya_crashes
 from module.repo import get_contributed_repo_count, get_user_repo_count
+from module.request_manager import print_rate_limit
 from module.stars import get_total_stars
 from module.svg import update_svg
 from module.work_hours import get_work_hours
@@ -82,6 +84,18 @@ def build_stats() -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--request",
+        action="store_true",
+        help="Show GitHub API rate limit info and exit",
+    )
+    args = parser.parse_args()
+
+    if args.request:
+        print_rate_limit()
+        return
+
     print("=== Collecting stats ===")
     stats = build_stats()
 
