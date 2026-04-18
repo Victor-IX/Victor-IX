@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="520px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="550px" font-size="16px">
 <style>
 @font-face {
 src: local('Consolas'), local('Consolas Bold');
@@ -16,31 +16,26 @@ size-adjust: 109%;
 .cc {fill:rgb(54, 63, 75);}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="520px" fill="#0D1117" rx="15"/>
+<rect width="985px" height="550px" fill="#0D1117" rx="15"/>
 <text x="15" y="30" fill="#c9d1d9" class="key">
-<tspan x="380" y="40">                                         ++++</tspan>
-<tspan x="380" y="60">                                  +++++++++++++++++</tspan>
-<tspan x="380" y="80">                            ++++++++++++++++++++++++++++</tspan>
-<tspan x="380" y="100">                           ##*++++++++++++++++++++++++++--</tspan>
-<tspan x="380" y="120">                           ######**++++++++++++++++=------</tspan>
-<tspan x="380" y="140">                           ##########**+++++++=-----------</tspan>
-<tspan x="380" y="160">                           ###############----------------</tspan>
-<tspan x="380" y="180">                           ###############----------------</tspan>
-<tspan x="380" y="200">                           ###############----------------</tspan>
-<tspan x="380" y="220">                           ###############----------------</tspan>
-<tspan x="380" y="240">                           ###############----------------</tspan>
-<tspan x="380" y="260">                           ###############----------------</tspan>
-<tspan x="380" y="280">                           ###############----------------</tspan>
-<tspan x="380" y="300">                              ############--------------</tspan>
-<tspan x="380" y="320">                                ##########-----------</tspan>
-<tspan x="380" y="340">                                    ######-------</tspan>
-<tspan x="380" y="360">                                       ###---</tspan>
+<tspan x="380" y="115">                                         ++++</tspan>
+<tspan x="380" y="135">                                  +++++++++++++++++</tspan>
+<tspan x="380" y="155">                            ++++++++++++++++++++++++++++</tspan>
+<tspan x="380" y="175">                           ##*++++++++++++++++++++++++++--</tspan>
+<tspan x="380" y="195">                           ######**++++++++++++++++=------</tspan>
+<tspan x="380" y="215">                           ##########**+++++++=-----------</tspan>
+<tspan x="380" y="235">                           ###############----------------</tspan>
+<tspan x="380" y="255">                           ###############----------------</tspan>
+<tspan x="380" y="275">                           ###############----------------</tspan>
+<tspan x="380" y="295">                           ###############----------------</tspan>
+<tspan x="380" y="315">                           ###############----------------</tspan>
+<tspan x="380" y="335">                           ###############----------------</tspan>
+<tspan x="380" y="355">                           ###############----------------</tspan>
+<tspan x="380" y="375">                              ############--------------</tspan>
+<tspan x="380" y="395">                                ##########-----------</tspan>
+<tspan x="380" y="415">                                    ######-------</tspan>
+<tspan x="380" y="435">                                       ###---</tspan>
 </text>
-<!-- <line x1="35" y1="25.5" x2="40" y2="25.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
-<path d="M 35 25.5 Q 25 25 25 35" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
-<line x1="25" y1="35" x2="25" y2="350" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
-<line x1="25" y1="145.5" x2="40" y2="145.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
-<line x1="25" y1="145.5" x2="40" y2="145.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" /> -->
 <g fill="#f8bc2d">
 <text x="20" y="30" opacity="0"><set attributeName="opacity" to="1" begin="0s" fill="freeze"/> — <tspan class="main">Victor Chedeville</tspan> —————————————————————————————————————</text>
 <text x="20" y="50" opacity="0"><set attributeName="opacity" to="1" begin="0.06s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">Windows 11</tspan></text>
@@ -62,6 +57,7 @@ text, tspan {white-space: pre;}
 <text x="20" y="430" opacity="0"><set attributeName="opacity" to="1" begin="1.20s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Nvizzio</tspan>:<tspan class="cc" id="nvizzio_hours_dots"> ........................................ </tspan><tspan class="value" id="nvizzio_hours">1,224</tspan></text>
 <text x="20" y="450" opacity="0"><set attributeName="opacity" to="1" begin="1.26s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Metric</tspan>.<tspan class="key">Empire</tspan>:<tspan class="cc" id="metric_empire_hours_dots"> .................................. </tspan><tspan class="value" id="metric_empire_hours">5,715</tspan></text>
 <text x="20" y="470" opacity="0"><set attributeName="opacity" to="1" begin="1.32s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Star</tspan>.<tspan class="key">Citizen</tspan>:<tspan class="cc" id="star_citizen_hours_dots"> ................................... </tspan><tspan class="value" id="star_citizen_hours">1,771</tspan></text>
-<text x="20" y="505" class="main" opacity="0"><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/> root@ngon# <tspan>|<animate attributeName="opacity" values="1;0" dur="1s" begin="1.6s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
+<text x="35" y="515" opacity="0"><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/><tspan>╭──(</tspan><tspan class="value">root</tspan><tspan>@</tspan><tspan class="value">ngon</tspan><tspan>)-[</tspan><tspan class="main">~</tspan><tspan>]</tspan></text>
+<text x="35" y="535" opacity="0"><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/><tspan>╰─</tspan><tspan class="value">#</tspan><tspan class="main"> <tspan>█<animate attributeName="opacity" values="1;0" dur="1s" begin="1.6s" calcMode="discrete" repeatCount="indefinite"/></tspan></tspan></text>
 </g>
 </svg>

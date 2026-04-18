@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="500px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="550px" font-size="16px">
 <style>
 @font-face {
 src: local('Consolas'), local('Consolas Bold');
@@ -16,54 +16,53 @@ size-adjust: 109%;
 .cc {fill: #c2cfde;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="500px" fill="#f6f8fa" rx="15"/>
+<rect width="985px" height="550px" fill="#f6f8fa" rx="15"/>
 <text x="15" y="30" fill="#24292f" class="key">
-<tspan x="380" y="40">                                         ++++</tspan>
-<tspan x="380" y="60">                                  +++++++++++++++++</tspan>
-<tspan x="380" y="80">                            ++++++++++++++++++++++++++++</tspan>
-<tspan x="380" y="100">                           ##*++++++++++++++++++++++++++--</tspan>
-<tspan x="380" y="120">                           ######**++++++++++++++++=------</tspan>
-<tspan x="380" y="140">                           ##########**+++++++=-----------</tspan>
-<tspan x="380" y="160">                           ###############----------------</tspan>
-<tspan x="380" y="180">                           ###############----------------</tspan>
-<tspan x="380" y="200">                           ###############----------------</tspan>
-<tspan x="380" y="220">                           ###############----------------</tspan>
-<tspan x="380" y="240">                           ###############----------------</tspan>
-<tspan x="380" y="260">                           ###############----------------</tspan>
-<tspan x="380" y="280">                           ###############----------------</tspan>
-<tspan x="380" y="300">                              ############--------------</tspan>
-<tspan x="380" y="320">                                ##########-----------</tspan>
-<tspan x="380" y="340">                                    ######-------</tspan>
-<tspan x="380" y="360">                                       ###---</tspan>          
+<tspan x="380" y="115">                                         ++++</tspan>
+<tspan x="380" y="135">                                  +++++++++++++++++</tspan>
+<tspan x="380" y="155">                            ++++++++++++++++++++++++++++</tspan>
+<tspan x="380" y="175">                           ##*++++++++++++++++++++++++++--</tspan>
+<tspan x="380" y="195">                           ######**++++++++++++++++=------</tspan>
+<tspan x="380" y="215">                           ##########**+++++++=-----------</tspan>
+<tspan x="380" y="235">                           ###############----------------</tspan>
+<tspan x="380" y="255">                           ###############----------------</tspan>
+<tspan x="380" y="275">                           ###############----------------</tspan>
+<tspan x="380" y="295">                           ###############----------------</tspan>
+<tspan x="380" y="315">                           ###############----------------</tspan>
+<tspan x="380" y="335">                           ###############----------------</tspan>
+<tspan x="380" y="355">                           ###############----------------</tspan>
+<tspan x="380" y="375">                              ############--------------</tspan>
+<tspan x="380" y="395">                                ##########-----------</tspan>
+<tspan x="380" y="415">                                    ######-------</tspan>
+<tspan x="380" y="435">                                       ###---</tspan>
 </text>
 <!-- <line x1="35" y1="25.5" x2="40" y2="25.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
 <path d="M 35 25.5 Q 25 25 25 35" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
 <line x1="25" y1="35" x2="25" y2="350" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
 <line x1="25" y1="145.5" x2="40" y2="145.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" />
 <line x1="25" y1="145.5" x2="40" y2="145.5" fill="none" stroke="#f8bc2d" stroke-width="1.3" /> -->
-<text x="20" y="30" fill="#eb9c00">
-<tspan x="20" y="30"> — </tspan><tspan class="main">Victor Chedeville</tspan> —————————————————————————————————————
-<tspan x="20" y="50" class="cc"> • </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">Windows 11</tspan>
-<tspan x="20" y="70" class="cc"> • </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ................... </tspan><tspan class="value" id="age_data">25 years, 9 months, 20 days</tspan>
-<tspan x="20" y="90" class="cc"> • </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">Python</tspan>
-<tspan x="20" y="110" class="cc"> • </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Spoken</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">English, French</tspan>
-<tspan x="20" y="130" class="cc"> </tspan>
-<tspan x="20" y="150"> — </tspan><tspan class="main">Contact</tspan> ———————————————————————————————————————————————
-<tspan x="20" y="170" class="cc"> • </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">vicor.ched@gmail.com</tspan>
-<tspan x="20" y="190" class="cc"> • </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">victor-chedeville</tspan>
-<tspan x="20" y="210" class="cc"> • </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ..................................... </tspan><tspan class="value">victor_9</tspan>
-<tspan x="20" y="230" class="cc"> • </tspan><tspan class="key">ArtStation</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">victor-ix</tspan>
-<tspan x="20" y="250" class="cc"> </tspan>
-<tspan x="20" y="270"> — </tspan><tspan class="main">Stats</tspan> —————————————————————————————————————————————————
-<tspan x="20" y="290" class="cc"> • </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">49</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">59</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ......... </tspan><tspan class="value" id="star_data">694</tspan>
-<tspan x="20" y="310" class="cc"> • </tspan><tspan class="key">Commmits</tspan>:<tspan class="cc" id="commit_data_dots"> ................ </tspan><tspan class="value" id="commit_data">9,410</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">31</tspan>
-<tspan x="20" y="330" class="cc"> • </tspan><tspan class="key">Blender</tspan>.<tspan class="key">Launcher</tspan>.<tspan class="key">Downloads</tspan>:<tspan class="cc" id="blender_launcher_dl_dots"> ................... </tspan><tspan class="value" id="blender_launcher_dl">113,406</tspan>
-<tspan x="20" y="350" class="cc"> • </tspan><tspan class="key">Default</tspan>.<tspan class="key">Cube</tspan>.<tspan class="key">Deleted</tspan>:<tspan class="cc" id="default_cube_dots"> ............................ </tspan><tspan class="value" id="default_cube">4142</tspan>
-<tspan x="20" y="370" class="cc"> • </tspan><tspan class="key">Maya</tspan>.<tspan class="key">Crashes</tspan>:<tspan class="cc" id="maya_crashes_dots"> ..................................... </tspan><tspan class="value" id="maya_crashes">250</tspan>
-<tspan x="20" y="390" class="cc"> </tspan>
-<tspan x="20" y="410"> — </tspan><tspan class="main">Time</tspan> ——————————————————————————————————————————————————
-<tspan x="20" y="430" class="cc"> • </tspan><tspan class="key">Nvizzio</tspan>:<tspan class="cc" id="nvizzio_hours_dots"> ........................................ </tspan><tspan class="value" id="nvizzio_hours">1,224</tspan>
-<tspan x="20" y="450" class="cc"> • </tspan><tspan class="key">Metric</tspan>.<tspan class="key">Empire</tspan>:<tspan class="cc" id="metric_empire_hours_dots"> .................................. </tspan><tspan class="value" id="metric_empire_hours">5,715</tspan>
-<tspan x="20" y="470" class="cc"> • </tspan><tspan class="key">Star</tspan>.<tspan class="key">Citizen</tspan>:<tspan class="cc" id="star_citizen_hours_dots"> ................................... </tspan><tspan class="value" id="star_citizen_hours">1,771</tspan>
-</text>
+<g fill="#eb9c00">
+<text x="20" y="30" opacity="0"><set attributeName="opacity" to="1" begin="0s" fill="freeze"/> — <tspan class="main">Victor Chedeville</tspan> —————————————————————————————————————</text>
+<text x="20" y="50" opacity="0"><set attributeName="opacity" to="1" begin="0.06s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">Windows 11</tspan></text>
+<text x="20" y="70" opacity="0"><set attributeName="opacity" to="1" begin="0.12s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ................... </tspan><tspan class="value" id="age_data">25 years, 9 months, 20 days</tspan></text>
+<text x="20" y="90" opacity="0"><set attributeName="opacity" to="1" begin="0.18s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">Python</tspan></text>
+<text x="20" y="110" opacity="0"><set attributeName="opacity" to="1" begin="0.24s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Spoken</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">English, French</tspan></text>
+<text x="20" y="150" opacity="0"><set attributeName="opacity" to="1" begin="0.36s" fill="freeze"/> — <tspan class="main">Contact</tspan> ———————————————————————————————————————————————</text>
+<text x="20" y="170" opacity="0"><set attributeName="opacity" to="1" begin="0.42s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">vicor.ched@gmail.com</tspan></text>
+<text x="20" y="190" opacity="0"><set attributeName="opacity" to="1" begin="0.48s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">victor-chedeville</tspan></text>
+<text x="20" y="210" opacity="0"><set attributeName="opacity" to="1" begin="0.54s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ..................................... </tspan><tspan class="value">victor_9</tspan></text>
+<text x="20" y="230" opacity="0"><set attributeName="opacity" to="1" begin="0.60s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">ArtStation</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">victor-ix</tspan></text>
+<text x="20" y="270" opacity="0"><set attributeName="opacity" to="1" begin="0.72s" fill="freeze"/> — <tspan class="main">Stats</tspan> —————————————————————————————————————————————————</text>
+<text x="20" y="290" opacity="0"><set attributeName="opacity" to="1" begin="0.78s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> .... </tspan><tspan class="value" id="repo_data">49</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">59</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ......... </tspan><tspan class="value" id="star_data">694</tspan></text>
+<text x="20" y="310" opacity="0"><set attributeName="opacity" to="1" begin="0.84s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Commmits</tspan>:<tspan class="cc" id="commit_data_dots"> ................ </tspan><tspan class="value" id="commit_data">9,409</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ...... </tspan><tspan class="value" id="follower_data">31</tspan></text>
+<text x="20" y="330" opacity="0"><set attributeName="opacity" to="1" begin="0.90s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Blender</tspan>.<tspan class="key">Launcher</tspan>.<tspan class="key">Downloads</tspan>:<tspan class="cc" id="blender_launcher_dl_dots"> ................... </tspan><tspan class="value" id="blender_launcher_dl">113,405</tspan></text>
+<text x="20" y="350" opacity="0"><set attributeName="opacity" to="1" begin="0.96s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Default</tspan>.<tspan class="key">Cube</tspan>.<tspan class="key">Deleted</tspan>:<tspan class="cc" id="default_cube_dots"> ............................ </tspan><tspan class="value" id="default_cube">4142</tspan></text>
+<text x="20" y="370" opacity="0"><set attributeName="opacity" to="1" begin="1.02s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Maya</tspan>.<tspan class="key">Crashes</tspan>:<tspan class="cc" id="maya_crashes_dots"> ..................................... </tspan><tspan class="value" id="maya_crashes">250</tspan></text>
+<text x="20" y="410" opacity="0"><set attributeName="opacity" to="1" begin="1.14s" fill="freeze"/> — <tspan class="main">Time</tspan> ——————————————————————————————————————————————————</text>
+<text x="20" y="430" opacity="0"><set attributeName="opacity" to="1" begin="1.20s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Nvizzio</tspan>:<tspan class="cc" id="nvizzio_hours_dots"> ........................................ </tspan><tspan class="value" id="nvizzio_hours">1,224</tspan></text>
+<text x="20" y="450" opacity="0"><set attributeName="opacity" to="1" begin="1.26s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Metric</tspan>.<tspan class="key">Empire</tspan>:<tspan class="cc" id="metric_empire_hours_dots"> .................................. </tspan><tspan class="value" id="metric_empire_hours">5,715</tspan></text>
+<text x="20" y="470" opacity="0"><set attributeName="opacity" to="1" begin="1.32s" fill="freeze"/><tspan class="cc"> • </tspan><tspan class="key">Star</tspan>.<tspan class="key">Citizen</tspan>:<tspan class="cc" id="star_citizen_hours_dots"> ................................... </tspan><tspan class="value" id="star_citizen_hours">1,771</tspan></text>
+<text x="35" y="515" opacity="0"><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/><tspan>╭──(</tspan><tspan class="value">root</tspan><tspan>@</tspan><tspan class="value">ngon</tspan><tspan>)-[</tspan><tspan class="main">~</tspan><tspan>]</tspan></text>
+<text x="35" y="535" opacity="0"><set attributeName="opacity" to="1" begin="1.6s" fill="freeze"/><tspan>╰─</tspan><tspan class="value">#</tspan><tspan class="main"> <tspan>█<animate attributeName="opacity" values="1;0" dur="1s" begin="1.6s" calcMode="discrete" repeatCount="indefinite"/></tspan></tspan></text>
+</g>
 </svg>
