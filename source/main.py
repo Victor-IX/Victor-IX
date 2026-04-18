@@ -13,26 +13,42 @@ from module.svg import update_svg
 _RESOURCES = Path(__file__).resolve().parent / "resources"
 
 
+_STEPS = (
+    ("age_data", "Calculating age", daily_readme),
+    ("commit_data", "Fetching commit count", lambda: get_total_commits() + get_archived_commit_count()),
+    ("star_data", "Fetching star count", get_total_stars),
+    ("repo_data", "Fetching owned repo count", get_user_repo_count),
+    ("contrib_data", "Fetching contributed repo count", get_contributed_repo_count),
+    ("follower_data", "Fetching follower count", get_github_followers),
+    ("blender_launcher_dl", "Fetching Blender Launcher downloads", get_total_download_count),
+    ("default_cube", "Fetching removed default cubes", get_removed_cubes),
+)
+
+
 def build_stats() -> dict:
-    return {
-        "age_data": daily_readme(),
-        "commit_data": get_total_commits() + get_archived_commit_count(),
-        "star_data": get_total_stars(),
-        "repo_data": get_user_repo_count(),
-        "contrib_data": get_contributed_repo_count(),
-        "follower_data": get_github_followers(),
-        "blender_launcher_dl": get_total_download_count(),
-        "default_cube": get_removed_cubes(),
-    }
+    stats = {}
+    total = len(_STEPS)
+    for index, (key, label, func) in enumerate(_STEPS, start=1):
+        print(f"[{index}/{total}] {label}...")
+        stats[key] = func()
+    return stats
 
 
 def main() -> None:
+    print("=== Collecting stats ===")
     stats = build_stats()
+
+    print("\n=== Results ===")
     for key, value in stats.items():
         print(f"  {key:<22} {value}")
 
-    for theme in ("dark_mode.svg", "light_mode.svg"):
+    print("\n=== Updating SVG files ===")
+    themes = ("dark_mode.svg", "light_mode.svg")
+    for index, theme in enumerate(themes, start=1):
+        print(f"[{index}/{len(themes)}] Writing {theme}...")
         update_svg(str(_RESOURCES / theme), stats)
+
+    print("\nDone.")
 
 
 if __name__ == "__main__":
